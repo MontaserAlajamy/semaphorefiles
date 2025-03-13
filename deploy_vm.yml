@@ -9,7 +9,7 @@
         api_password: "b7fc6575-d485-4b12-bec3-c82c3f7c64cd"
         node: "pve"
         name: "ubuntu-vm"
-        vmid: 101
+        vmid: 1010
         memory: 2048
         cores: 2
         sockets: 1
