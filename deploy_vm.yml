@@ -14,7 +14,7 @@
         cores: 2
         sockets: 1
         scsi:
-          - scsi0: "local-lvm:20G"  # Corrected to pass a dictionary
+          scsi0: "local-lvm:20G"  # Corrected to use a dictionary format
         ostype: "l26"
         boot: "c"
         state: "present"
