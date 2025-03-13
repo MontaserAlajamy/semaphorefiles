@@ -13,7 +13,8 @@
         memory: 2048
         cores: 2
         sockets: 1
-        scsi: "local-lvm:20G"  # Specify the disk directly using scsi
+        scsi:
+          - scsi0: "local-lvm:20G"  # Corrected to pass a dictionary
         ostype: "l26"
         boot: "c"
         state: "present"
