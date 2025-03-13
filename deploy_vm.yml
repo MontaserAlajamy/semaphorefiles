@@ -13,11 +13,7 @@
         memory: 2048
         cores: 2
         sockets: 1
-        disk:
-          - scsi:
-              id: 0
-              size: 20G
-              storage: "local-lvm"
+        scsi: "local-lvm:20G"  # Specify the disk directly using scsi
         ostype: "l26"
         boot: "c"
         state: "present"
