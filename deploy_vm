@@ -1,0 +1,21 @@
+---
+- name: Deploy Ubuntu VM on Proxmox
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Create VM
+      community.general.proxmox_kvm:
+        api_host: "192.168.30.155"
+        api_user: "terraform@pve"
+        api_password: "b7fc6575-d485-4b12-bec3-c82c3f7c64cd"
+        node: "pve"
+        vmid: 100
+        name: "ubuntu-server"
+        memory: 4096
+        cores: 2
+        sockets: 1
+        disk: "local-lvm:20G"
+        net: '{"net0":"virtio,bridge=vmbr0"}'
+        ostype: "l26"
+        boot: "order=scsi0"
+        state: "present"
